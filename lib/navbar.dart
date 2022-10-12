@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:yash_app/about.dart';
+import 'package:yash_app/education.dart';
+import 'package:yash_app/Experience.dart';
+import 'package:yash_app/contactus.dart';
 
 class navBar extends StatelessWidget {
   Widget build(BuildContext context) {
@@ -20,18 +24,38 @@ class navBar extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.people),
             title: Text('About'),
+            onTap: () => {
+              Navigator.pop(context),
+              Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(builder: (context) => About()))
+            },
           ),
           ListTile(
             leading: Icon(Icons.school),
             title: Text('Education'),
+            onTap: () => {
+              Navigator.pop(context),
+              Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(builder: (context) => Education()))
+            },
           ),
           ListTile(
             leading: Icon(Icons.explore),
             title: Text('Experience'),
+            onTap: () => {
+              Navigator.pop(context),
+              Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(builder: (context) => Experience()))
+            },
           ),
           ListTile(
             leading: Icon(Icons.contact_phone),
             title: Text('Contact us'),
+            onTap: () => {
+              Navigator.pop(context),
+              Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(builder: (context) => Contact()))
+            },
           ),
           ListTile(
             leading: Icon(Icons.share),
